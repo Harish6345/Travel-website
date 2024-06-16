@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Travel Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+       .special{
+        box-shadow:0px 2px 30px  ;
+       }
+        .header-nav a {
+            position: relative;
+            text-decoration: none;
+            color: black;
+        }
+        .header-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 25%;
+            width: 0%;
+            height: 2px;
+            transition: width 0.3s ease-in-out;
+        }
+        .header-nav a:hover::after {
+            background-color: #ff4b4b;
+            width: 50%;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <!-- Navbar -->
+    <div class="navbar w-full h-20 m-0 text-black font-semibold flex justify-between items-center px-4 lg:px-10 shadow-red-300 shadow-2xl">
+        <img src="./images/logo-red.png" alt="Logo" class="w-40">
+        <div class="header-nav hidden lg:flex gap-10">
+            <a href="./index.html">Popular Places</a>
+            <a href="./popularplaces.html">Travel Outside</a>
+            <a href="./outlet.html">Outline Package</a>
+        </div>
+        <button class="hidden lg:block bg-red-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-black hover:text-white">Register Now</button>
+        <button class="lg:hidden text-black" id="hamburger">
+            <i class="fa-solid fa-bars text-2xl mx-2"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden lg:hidden bg-black bg-opacity-75 absolute inset-0 flex flex-col items-center justify-center space-y-6" id="mobileMenu">
+        <a href="./index.html" class="text-white text-2xl">Popular Places</a>
+        <a href="./popularplaces.html" class="text-white text-2xl">Travel Outside</a>
+        <a href="./outlet.html" class="text-white text-2xl">Outline Package</a>
+        <button class="bg-white text-black px-4 py-2 rounded-full font-semibold">Register Now</button>
+        <button class="text-white" id="closeMenu">
+            <i class="fa-solid fa-times text-2xl"></i>
+        </button>
+    </div>
+<div class="main-sec w-[90%] lg:w-[80%] mx-auto mt-10 pb-[20vh]">
+    <h2 class="text-3xl font-bold ps-4">Wenge house</h2>
+    <div class="rating flex flex-col lg:flex-row gap-[8vh] mt-2 ps-2">
+        <div class="star flex gap-2 mt-2 ps-2">
+            <i class="fa-solid fa-star text-red-500"></i>
+            <i class="fa-solid fa-star text-red-500"></i>
+            <i class="fa-solid fa-star text-red-500"></i>
+            <i class="fa-solid fa-star text-red-500"></i>
+            <i class="fa-solid fa-star-half-stroke text-red-500"></i>
+            <i class="fa-regular fa-star text-red-500"></i>
+        </div>
+        <p>245 Reviews</p>
+        <p>Location: San Francisco, California, United States</p>
+    </div>
+    <div class="mages-main w-full flex flex-col lg:flex-row p-2">
+        <div class="mages-first w-full lg:w-[50%] p-2">
+            <img src="./images/house-1.png" alt="" class="rounded-md">
+        </div>
+        <div class="main-mages w-full lg:w-[50%] p-2">
+            <div class="firs-div flex gap-2">
+                <img src="./images/house-2.png" alt="" class="w-[48%] rounded-md">
+                <img src="./images/house-3.png" alt="" class="w-[48%] rounded-md">
+            </div>
+            <div class="sec-div flex p-2 gap-2">
+                <img src="./images/house-4.png" alt="" class="w-[48%] rounded-md">
+                <img src="./images/house-5.png" alt="" class="w-[48%] rounded-md">
+            </div>
+        </div>
+    </div>
+    <div class="text-tag w-full ps-2">
+        <h2 class="text-xl font-semibold mt-2">Entire rental unit hosted by Brandon</h2>
+        <p class="mt-1">2 guests <span class="ms-6">2 beds</span> <span class="ms-6">1 bathroom</span></p>
+        <h2 class="text-end font-extrabold">$100 / day</h2>
+    </div>
+    <div class="hori h-[1px] w-[60%] mb-10 mt-4 ms-2" style="background-color:#4d4d4d;"></div>
+    <div class="check-a w-full special h-auto lg:h-[10vh] flex flex-col lg:flex-row gap-4 lg:gap-20 items-center px-6 py-4 rounded-md">
+        <div class="sirst-check">
+            <h1 class="font-bold">Check in</h1>
+            <h1>Add date</h1>
+        </div>
+        <div class="hori w-full lg:w-[1px] h-[1px] lg:h-8 bg-gray-500"></div>
+        <div class="sirst-check">
+            <h1 class="font-bold">Check out</h1>
+            <h1>Add date</h1>
+        </div>
+        <div class="hori w-full lg:w-[1px] h-[1px] lg:h-8 bg-gray-500"></div>
+        <div class="sirst-check">
+            <h1 class="font-bold">Guests</h1>
+            <h1>2 guests</h1>
+        </div>
+        <div class="hori w-full lg:w-[1px] h-[1px] lg:h-8 bg-gray-500"></div>
+        <div class="byn w-full lg:w-[50%] ">
+            <button class="pt-2 pb-2 lg:py-3 rounded-sm px-14 lg:px-10 text-white font-medium bg-red-500 mx-16 lg:mx-28 lg:float-right">Check availability</button>
+        </div>
+    </div>
+    <div class="main-btns mt-6 flex gap-7">
+        <i class="fa-solid fa-house"></i>
+        <h1 class="font-bold">Entire Home <br><span class="font-light">You will have the entire flat for yourself</span></h1>
+    </div>
+    <div class="main-btns mt-4 flex gap-7">
+        <i class="fa-solid fa-paintbrush"></i>
+        <h1 class="font-bold">Enhanced Clean<br><span class="font-light">This host has committed to Staybnb's cleaning process</span></h1>
+    </div>
+    <div class="main-btns mt-4 flex gap-7">
+        <i class="fa-solid fa-location-dot"></i>
+        <h1 class="font-bold">Great Location <br><span class="font-light">90% of recent guests gave the location a 5-star rating</span></h1>
+    </div>
+    <div class="main-btns mt-4 flex gap-7">
+        <i class="fa-solid fa-heart"></i>
+        <h1 class="font-bold">Great Check-in Experience<br><span class="font-light">100% of recent guests gave the check-in process a 5-star rating</span></h1>
+    </div>
+    <div class="hori h-[1px] w-[60%] mb-10 ps-2 mt-10" style="background-color:#4d4d4d;"></div>
+    <p class="text-gray-700 w-full lg:w-[60%]">Guests can look forward to a welcoming and comfortable stay, with amenities tailored to enhance their experience. Whether traveling alone, as a couple, or with family and friends, our accommodations are designed to meet diverse needs. Enjoy the convenience and hospitality that ensures a memorable visit.</p>
+    <div class="hori h-[1px] w-[60%] mb-10 ps-2 mt-10" style="background-color:#4d4d4d;"></div>
+    <div class="locah w-full">
+        <h1 class="text-3xl font-semibold">Location on map</h1>
+        <iframe class="min-w-full mt-10 rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50470.02982610145!2d-122.47879950884267!3d37.75776068870221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1718548083733!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="text-fiale mt-6">
+        <h1 class="font-bold mb-1">San Francisco, California, United States</h1>
+        <h1>It's like a home away from home</h1>
+    </div>
+    <div class="end flex flex-col lg:flex-row gap-10">
+        <div class="end-first mt-20">
+            <img src="./images/host.png" class="rounded-full" alt="">
+        </div>
+        <div class="end-txt mt-20">
+            <h1 class="text-2xl font-bold">Hosted by Brandon</h1>
+            <div class="star flex gap-2 mt-2 ps-2">
+                <i class="fa-solid fa-star text-red-500"></i>
+                <i class="fa-solid fa-star text-red-500"></i>
+                <i class="fa-solid fa-star text-red-500"></i>
+                <i class="fa-solid fa-star text-red-500"></i>
+                <i class="fa-solid fa-star-half-stroke text-red-500"></i>
+                <i class="fa-regular fa-star text-red-500"></i>
+                <p class="hidden lg:block">&nbsp; &nbsp; &nbsp;245&nbsp;Reviews</p>
+                <p class="hidden lg:block">&nbsp; &nbsp; &nbsp;Response rate&nbsp;100%</p>
+                <p class="hidden lg:block">&nbsp; &nbsp; &nbsp;Response time: 60 min</p>
+            </div>
+            <button class="bg-transparent border px-8 py-[9px] rounded-md mt-10 border-red-500">Contact Host</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <div class="finalbefore-part w-full lg:w-[90%] mx-auto text-black mt-10">
+        <div class="icons w-full lg:w-[80%] mx-auto flex justify-center gap-10 pb-10">
+            <a href="#"><i class="fa-brands fa-facebook-f" style="color:#4d4d4d;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color:#4d4d4d;"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in" style="color:#4d4d4d;"></i></i></a>
+            <a href="#"><i class="fa-brands fa-youtube" style="color:#4d4d4d;"></i></a>
+        </div>
+        <div class="hori h-[1px] w-full lg:w-[80%] mx-auto mb-10 ps-2" style="background-color:#4d4d4d;"></div>
+        <div class="footer mt-10 flex justify-center mb-5">
+            <h2 class="font-medium">copyright &copy; 2024 , Staybnb Inc.</h2>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');   
+        const closeMenu = document.getElementById('closeMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

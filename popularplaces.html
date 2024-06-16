@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Travel Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Red underline hover effect for header nav links */
+        .header-nav a {
+            position: relative;
+            text-decoration: none;
+            color: black;
+        }
+        .header-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 25%;
+            width: 0%;
+            height: 2px;
+            transition: width 0.3s ease-in-out;
+        }
+        .header-nav a:hover::after {
+            background-color: #ff4b4b;
+            width: 50%;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <!-- Navbar -->
+    <div class="navbar w-full h-20 m-0 text-black font-semibold flex justify-between items-center px-4 lg:px-10">
+        <img src="./images/logo-red.png" alt="Logo" class="w-40">
+        <div class="header-nav hidden lg:flex gap-10">
+            <a href="./index.html">Popular Places</a>
+            <a href="./popularplaces.html">Travel Outside</a>
+            <a href="./outlet.html">Outline Package</a>
+        </div>
+        <button class="hidden lg:block bg-red-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-black hover:text-white">Register Now</button>
+        <button class="lg:hidden text-black" id="hamburger">
+            <i class="fa-solid fa-bars text-2xl mx-2"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden lg:hidden bg-black bg-opacity-75 absolute inset-0 flex flex-col items-center justify-center space-y-6" id="mobileMenu">
+        <a href="./index.html" class="text-white text-2xl">Popular Places</a>
+        <a href="./popularplaces.html" class="text-white text-2xl">Travel Outside</a>
+        <a href="./outlet.html" class="text-white text-2xl">Outline Package</a>
+        <button class="bg-white text-black px-4 py-2 rounded-full font-semibold">Register Now</button>
+        <button class="text-white" id="closeMenu">
+            <i class="fa-solid fa-times text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content w-4/5 mx-auto flex flex-col justify-between lg:flex-row">
+        <div class="maincontent-firstpart mt-5 lg:w-3/5">
+            <p>200+ options</p>
+            <h2 class="text-4xl font-bold">Recommended Places in San Francisco</h2>
+            <div class="h-[1px] w-11/12 bg-slate-300 mt-10"></div>
+
+            <!-- Property Cards -->
+            <div class="villa flex flex-col lg:flex-row w-full gap-6 mt-6">
+                <div class="firstvilla lg:w-2/5">
+                    <img src="./images/house-1.png" alt="House 1" class="rounded-lg">
+                </div>
+                <div class="secvila-txt lg:w-3/5 pt-6">
+                    <h1 class="font-medium">Private Villa in San Francisco</h1>
+                    <h2 class="text-2xl font-bold mt-2">Deluxe Queen Room with Street View</h2>
+                    <p class="mt-2">1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                    <div class="star flex gap-2 mt-2">
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star-half text-red-500"></i>
+                    </div>
+                    <div class="sec-text-fin text-end mt-2">
+                        <p>2 Guests</p>
+                        <p><span class="font-bold">&#36;100</span> / day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[1px] w-11/12 bg-slate-300 mt-10"></div>
+
+            <!-- Repeat Property Cards for other properties -->
+            <!-- Property Card 2 -->
+            <div class="villa flex flex-col lg:flex-row w-full gap-6 mt-6">
+                <div class="firstvilla lg:w-2/5">
+                    <img src="./images/house-2.png" alt="House 2" class="rounded-lg">
+                </div>
+                <div class="secvila-txt lg:w-3/5 pt-6">
+                    <h1 class="font-medium">Private Villa in San Francisco</h1>
+                    <h2 class="text-2xl font-bold mt-2">Deluxe Queen Room with Street View</h2>
+                    <p class="mt-2">1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                    <div class="star flex gap-2 mt-2">
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star-half text-red-500"></i>
+                    </div>
+                    <div class="sec-text-fin text-end mt-2">
+                        <p>2 Guests</p>
+                        <p><span class="font-bold">&#36;100</span> / day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[1px] w-11/12 bg-slate-300 mt-10"></div>
+
+            <!-- Property Card 3 -->
+            <div class="villa flex flex-col lg:flex-row w-full gap-6 mt-6">
+                <div class="firstvilla lg:w-2/5">
+                    <img src="./images/house-4.png" alt="House 4" class="rounded-lg">
+                </div>
+                <div class="secvila-txt lg:w-3/5 pt-6">
+                    <h1 class="font-medium">Private Villa in San Francisco</h1>
+                    <h2 class="text-2xl font-bold mt-2">Deluxe Queen Room with Street View</h2>
+                    <p class="mt-2">1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                    <div class="star flex gap-2 mt-2">
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star-half text-red-500"></i>
+                    </div>
+                    <div class="sec-text-fin text-end mt-2">
+                        <p>2 Guests</p>
+                        <p><span class="font-bold">&#36;100</span> / day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[1px] w-11/12 bg-slate-300 mt-10"></div>
+ <!-- Property Card 3 -->
+ <div class="villa flex flex-col lg:flex-row w-full gap-6 mt-6">
+    <div class="firstvilla lg:w-2/5">
+        <img src="./images/house-3.png" alt="House 4" class="rounded-lg">
+    </div>
+    <div class="secvila-txt lg:w-3/5 pt-6">
+        <h1 class="font-medium">Private Villa in San Francisco</h1>
+        <h2 class="text-2xl font-bold mt-2">Deluxe Queen Room with Street View</h2>
+        <p class="mt-2">1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+        <div class="star flex gap-2 mt-2">
+            <i class="fa-solid fa-star text-red-500"></i>
+            <i class="fa-solid fa-star text-red-500"></i>
+            <i class="fa-solid fa-star text-red-500"></i>
+            <i class="fa-solid fa-star text-red-500"></i>
+            <i class="fa-solid fa-star-half text-red-500"></i>
+        </div>
+        <div class="sec-text-fin text-end mt-2">
+            <p>2 Guests</p>
+            <p><span class="font-bold">&#36;100</span> / day</p>
+        </div>
+    </div>
+</div>
+<div class="h-[1px] w-11/12 bg-slate-300 mt-10"></div>
+            <!-- Property Card 4 -->
+            <div class="villa flex flex-col lg:flex-row w-full gap-6 mt-6">
+                <div class="firstvilla lg:w-2/5">
+                    <img src="./images/house-5.png" alt="House 5" class="rounded-lg">
+                </div>
+                <div class="secvila-txt lg:w-3/5 pt-6">
+                    <h1 class="font-medium">Private Villa in San Francisco</h1>
+                    <h2 class="text-2xl font-bold mt-2">Deluxe Queen Room with Street View</h2>
+                    <p class="mt-2">1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                    <div class="star flex gap-2 mt-2">
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star text-red-500"></i>
+                        <i class="fa-solid fa-star-half text-red-500"></i>
+                    </div>
+                    <div class="sec-text-fin text-end mt-2">
+                        <p>2 Guests</p>
+                        <p><span class="font-bold">&#36;100</span> / day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="maincontent-secpart mt-5 border border-gray-400 w-[20%] h-[450px] ps-4 pt-5 pe-4 hidden lg:block">
+            <h2 class="text-2xl font-bold mb-2">Select Filters</h2>
+            <p class="font-bold mb-2 mt-2">Property Type</p>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">House</p>
+                </div>
+                <span>( O )</span>
+            </div>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">Hostel</p>
+                </div>
+                <span>( O )</span>
+            </div>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">Villa</p>
+                </div>
+                <span>( O )</span>
+            </div>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">Flat</p>
+                </div>
+                <span>( O )</span>
+            </div>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">Guest Suite</p>
+                </div>
+                <span>( O )</span>
+            </div>
+            <p class="font-bold mb-2 mt-2">Amenities</p>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">Air Conditioning</p>
+                </div>
+                <span>( O )</span>
+            </div>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">Wifi</p>
+                </div>
+                <span>( O )</span>
+            </div>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">Gym</p>
+                </div>
+                <span>( O )</span>
+            </div>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">Pool</p>
+                </div>
+                <span>( O )</span>
+            </div>
+            <div class="check flex justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" name="" id="">
+                    <p class="ms-2">Kichen</p>
+                </div>
+                <span>( O )</span>
+            </div>
+        </div>
+        
+ </div>
+
+
+    <!-- Footer -->
+    <div class="finalbefore-part w-[90%] mx-auto text-black mt-20">
+        <div class="icons w-[80%] mx-auto flex justify-center gap-10 pb-10">
+            <a href="#"><i class="fa-brands fa-facebook-f" style="color:#4d4d4d;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color:#4d4d4d;"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in" style="color:#4d4d4d;"></i></i></a>
+            <a href="#"><i class="fa-brands fa-youtube" style="color:#4d4d4d;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter" style="color:#4d4d4d;"></i></a>
+        </div>
+        <div class="hori h-[1px] w-[80%] mx-auto mb-10" style="background-color:#4d4d4d;"></div>
+        <div class="footer mt-10 flex justify-center mb-5">
+            <h2 class="font-medium">copyright &copy; 2024 ,staybnb inc .</h2>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');   
+        const closeMenu = document.getElementById('closeMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
